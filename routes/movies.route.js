@@ -4,22 +4,22 @@ import express from "express";
 const router = express.Router();
 
 //reading
-router.get("/movies", (req, res) => {
+router.get("/", (req, res) => {
   res.send("This is get Method");
 });
 
 //creating
-router.post("/movies", (req, res) => {
+router.post("/", (req, res) => {
   res.send("This is post Method");
 });
 
 //updating
-router.put("/movies/:id", (req, res) => {
+router.put("/:id", (req, res) => {
   res.send("This is put method");
 });
 
 //delete
-router.delete("/movies/:id", (req, res) => {
+router.delete("/:id", (req, res) => {
   res.send("this is delete method");
 });
 
