@@ -1,26 +1,24 @@
 //CRUD function
 import express from "express";
+import {
+  movieCreate,
+  movieDelete,
+  movieIndex,
+  movieUpdate,
+} from "../controllers/movies.controllers.js";
 
 const router = express.Router();
 
 //reading
-router.get("/", (req, res) => {
-  res.send("This is get Method");
-});
+router.get("/", movieIndex);
 
 //creating
-router.post("/", (req, res) => {
-  res.send("This is post Method");
-});
+router.post("/", movieCreate);
 
 //updating
-router.put("/:id", (req, res) => {
-  res.send("This is put method");
-});
+router.put("/:id", movieUpdate);
 
 //delete
-router.delete("/:id", (req, res) => {
-  res.send("this is delete method");
-});
+router.delete("/:id", movieDelete);
 
 export default router;
